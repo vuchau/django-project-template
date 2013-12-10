@@ -5,6 +5,7 @@ SECRET_KEY = "DON'T USE THIS KEY! PLEASE RUN: `fab generate_secret`"
 EMAIL_HOST_USER = '' # Gmail username
 EMAIL_HOST_PASSWORD = '' # Gmail password
 ALLOWED_HOSTS = []
+USE_X_FORWARDED_HOST = True
 AWS_ACCESS_KEY_ID = '' # The shorter one
 AWS_SECRET_ACCESS_KEY = '' # The longer one
 AWS_BUCKET_NAME = '' # For your static files

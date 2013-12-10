@@ -57,7 +57,21 @@ sub vcl_recv {
 
     # Use the backend we set up above to answer the request if it's not cached.
     set req.backend = apache;
-    
+
+    if (req.restarts == 0) {
+        if (req.http.x-forwarded-for) {
+            set req.http.X-Forwarded-For =
+                req.http.X-Forwarded-For + ", " + client.ip;
+        } else {
+            set req.http.X-Forwarded-For = client.ip;
+        }
+    }
+
+    # If it's not GET or HEAD let it go
+    if (req.request != "GET" && req.request != "HEAD") {
+        return (pass);
+    }
+
     # Don't cache these pages
     if (req.url ~ "^/admin/" ||
         <% @varnish_no_cache_urls.each do |item| -%>

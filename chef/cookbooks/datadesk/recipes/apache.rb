@@ -8,6 +8,13 @@ package "libapache2-mod-wsgi" do
     :upgrade
 end
 
+# install mod-rpaf so apache can use the X-Forwarded-For
+# header to see the real incoming IP addresses. This prevents server-status
+# from being publicly available
+package "libapache2-mod-rpaf" do
+    :upgrade
+end
+
 # Restart apache
 service "apache2" do
   enabled true

@@ -75,6 +75,21 @@ script "Install pgstats for PyMunin" do
   end
 end
 
+# Make sure we have the correct Apache plugins
+script "Install Apache2 plugins" do
+  interpreter "bash"
+  user "root"
+  group "root"
+  code <<-EOH
+    ln -s /usr/share/munin/plugins/apache_accesses /etc/munin/plugins/apache_accesses
+    ln -s /usr/share/munin/plugins/apache_processes /etc/munin/plugins/apache_processes
+    ln -s /usr/share/munin/plugins/apachestats /etc/munin/plugins/apachestats
+    ln -s /usr/share/munin/plugins/apache_volume /etc/munin/plugins/apache_volume
+  EOH
+  not_if do
+    File.exists?("/etc/munin/plugins/apachestats")
+  end
+end
 
 # A memcached plugin
 script "Install memcachedstats for PyMunin" do
