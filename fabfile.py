@@ -265,6 +265,9 @@ def ps(process='all'):
     else:
         run("ps -e -O rss,pcpu | grep %s" % process)
 
+def ssh():
+    local("ssh ubuntu@%s -i %s" % (env.hosts[0], env.key_filename[0]))
+
 #
 # Local operations
 #
