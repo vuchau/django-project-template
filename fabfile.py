@@ -3,6 +3,7 @@ from __future__ import with_statement
 import os
 import sys
 import boto
+import time
 import random
 from fabric.api import *
 from os.path import expanduser
