@@ -11,7 +11,12 @@ Uses the [built-in](https://docs.djangoproject.com/en/1.5/ref/django-admin/#star
 
 Still experimental, so don't get your hopes up.
 
-[![Build Status](https://www.travis-ci.org/datadesk/django-project-template.png?branch=master)](https://www.travis-ci.org/datadesk/django-project-template)
+[![Build Status](https://travis-ci.org/datadesk/django-project-template.png?branch=master)](https://travis-ci.org/datadesk/django-project-template)
+[![Coverage Status](https://coveralls.io/repos/datadesk/django-project-template/badge.png?branch=master)](https://coveralls.io/r/datadesk/django-project-template?branch=master)
+
+* Issues: [https://github.com/datadesk/django-project-template/issues](https://github.com/datadesk/django-project-template/issues)
+* Testing: [https://travis-ci.org/datadesk/django-project-template](https://travis-ci.org/datadesk/django-project-template)
+* Coverage: [https://coveralls.io/r/datadesk/django-project-template](https://coveralls.io/r/datadesk/django-project-template)
 
 Features
 --------
