@@ -5,6 +5,11 @@ from django.test import TestCase
 
 class ToolboxTest(TestCase):
     
+    TEST_CSV = """Name,Type,County
+La Cañada Flintridge,Neighborhood,L.A.County
+Downtown,Neighborhood,L.A.County
+"""
+
     def test_unicodecsv(self):
         """
         Test simple usage of the unicodecsv toy.
@@ -12,14 +17,8 @@ class ToolboxTest(TestCase):
         import csv
         from toolbox import unicodecsv
         from cStringIO import StringIO
-        d = StringIO.StringIO()
-        d.write("Name,Type,County\n")
-        d.write("La Cañada Flintridge,Neighborhood,L.A.County\n")
-        d.write("Downtown,Neighborhood,L.A.County\n")
+        d = StringIO(self.TEST_CSV)
         reader = unicodecsv.UnicodeDictReader(d)
-        for row in reader: print row
-        print list(reader)
-#        print list(reader)
-#        reader.next()
-#        reader.__iter__()
-#        self.assertEqual(type(list(reader)), type([]))
+        reader.next()
+        reader.__iter__()
+        self.assertEqual(type(list(reader)), type([]))
