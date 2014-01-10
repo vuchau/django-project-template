@@ -11,9 +11,15 @@ class ToolboxTest(TestCase):
         """
         import csv
         from toolbox import unicodecsv
-        import StringIO
+        from cStringIO import StringIO
         d = StringIO.StringIO()
-        d.write("Name,Type,County")
-        d.write("La Cañada Flintridge,Neighborhood,L.A.County")
+        d.write("Name,Type,County\n")
+        d.write("La Cañada Flintridge,Neighborhood,L.A.County\n")
+        d.write("Downtown,Neighborhood,L.A.County\n")
         reader = unicodecsv.UnicodeDictReader(d)
-        self.assertEqual(type(list(reader)), type([]))
+        for row in reader: print row
+        print list(reader)
+#        print list(reader)
+#        reader.next()
+#        reader.__iter__()
+#        self.assertEqual(type(list(reader)), type([]))
