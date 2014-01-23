@@ -9,7 +9,7 @@ install:
 - cd repo
 - pip install -r requirements.txt
 - cp project/settings_test.template project/settings_dev.py
-script: 
+script:
 - python manage.py test
 - coverage run quicktest.py toolbox
 after_success:
