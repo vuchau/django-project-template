@@ -11,7 +11,12 @@ Uses the [built-in](https://docs.djangoproject.com/en/1.5/ref/django-admin/#star
 
 Still experimental, so don't get your hopes up.
 
-[![Build Status](https://www.travis-ci.org/datadesk/django-project-template.png?branch=master)](https://www.travis-ci.org/datadesk/django-project-template)
+[![Build Status](https://travis-ci.org/datadesk/django-project-template.png?branch=master)](https://travis-ci.org/datadesk/django-project-template)
+[![Coverage Status](https://coveralls.io/repos/datadesk/django-project-template/badge.png?branch=master)](https://coveralls.io/r/datadesk/django-project-template?branch=master)
+
+* Issues: [https://github.com/datadesk/django-project-template/issues](https://github.com/datadesk/django-project-template/issues)
+* Testing: [https://travis-ci.org/datadesk/django-project-template](https://travis-ci.org/datadesk/django-project-template)
+* Coverage: [https://coveralls.io/r/datadesk/django-project-template](https://coveralls.io/r/datadesk/django-project-template)
 
 Features
 --------
@@ -23,6 +28,7 @@ Features
 * Preconfiguration of [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) for [PostGIS](http://postgis.net/)
 * Preinstallation of [South](http://south.readthedocs.org/en/latest/) migrations
 * Preinstallation of [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar)
+* Preinstallation of [django-greeking](https://github.com/palewire/django-greeking)
 * [Fabric functions](https://github.com/datadesk/django-project-template/blob/master/fabfile.py) for local development and production deployment
 * Preinstallation of [tools for interacting with Amazon Web Services](https://code.google.com/p/boto/)
 * Preconfiguration of our preferred caching options for [development](https://github.com/datadesk/django-project-template/blob/master/project_name/settings_dev.template#L14) and [production](https://github.com/datadesk/django-project-template/blob/master/project_name/settings_prod.py#L14)

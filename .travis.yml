@@ -7,8 +7,10 @@ install:
 - mkdir repo
 - django-admin.py startproject --extension=py,.gitignore --template=https://github.com/datadesk/django-project-template/archive/master.zip project repo
 - cd repo
-- pip install -r requirements.txt --use-mirrors
+- pip install -r requirements.txt
 - cp project/settings_test.template project/settings_dev.py
-script: 
+script:
 - python manage.py test
-- python quicktest.py toolbox
+- coverage run quicktest.py toolbox
+after_success:
+  - coveralls
