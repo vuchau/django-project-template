@@ -69,6 +69,6 @@
     "munin_db_user": "",
     "munin_db_name": "",
     "munin_include_db_list": "",
-
+    "munin_master_ips": [],
     "crons": {}
 }

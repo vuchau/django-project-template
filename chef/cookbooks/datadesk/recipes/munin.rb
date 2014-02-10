@@ -11,7 +11,7 @@ package "munin-plugins-extra" do
     :upgrade
 end
 
-# Do the basic config for the node
+# Do the basic config for the master
 template "/etc/munin/munin.conf" do
   source "munin/munin.conf.erb"
   mode "777"
@@ -19,6 +19,18 @@ template "/etc/munin/munin.conf" do
   group "root"
   variables({
      :name => node[:munin_name]
+  })
+end
+
+# Do the basic config for the node
+template "/etc/munin/munin-node.conf" do
+  source "munin/munin-node.conf.erb"
+  mode "777"
+  owner "root"
+  group "root"
+  variables({
+     :name => node[:munin_name],
+     :munin_master_ips => node[:munin_master_ips]
   })
 end
 
