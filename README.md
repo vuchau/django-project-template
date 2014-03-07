@@ -50,7 +50,7 @@ Getting started
 Create a virtual enviroment to work inside.
 
 ```bash
-$ virtualenv --no-site-packages my-environment
+$ virtualenv my-environment
 ```
 
 Jump in and turn it on.
