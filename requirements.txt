@@ -19,4 +19,4 @@ python-memcached==1.53
 requests==2.1.0
 sh==1.09
 six==1.5.2
-sqlparse==0.1.10
+sqlparse==0.1.11
