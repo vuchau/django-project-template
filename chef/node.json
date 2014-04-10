@@ -9,7 +9,8 @@
         "datadesk::varnish",
         "datadesk::memcached",
         "datadesk::munin",
-        "datadesk::cron"
+        "datadesk::cron",
+        "datadesk::motd"
     ],
     "base_packages": [
         "git-core",
