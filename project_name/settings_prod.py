@@ -28,4 +28,4 @@ TEMPLATE_LOADERS = (
     )),
 )
 STATIC_URL = ''
-
+WSGI_APPLICATION = '{{ project_name }}.wsgi_prod.application'
