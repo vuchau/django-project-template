@@ -46,8 +46,8 @@ USE_L10N = True
 USE_TZ = True
 
 # Media and static files
-MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
-STATIC_ROOT = os.path.join(ROOT_DIR, 'static')
+MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
+STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
 STATICFILES_DIRS = (
     os.path.join(ROOT_DIR, 'templates', 'static'),
 )
