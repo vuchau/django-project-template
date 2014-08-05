@@ -65,7 +65,9 @@
     "varnish_no_cache_urls": [],
     "varnish_ttl": "10m",
     "varnish_health_url": "/app_status/",
-    
+
+    "newrelic_license_key": "",
+
     "munin_name": "",
     "munin_db_user": "",
     "munin_db_name": "",
