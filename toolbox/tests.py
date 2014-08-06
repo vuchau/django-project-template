@@ -12,7 +12,6 @@ class ToolboxTest(TestCase):
         """
         Test simple usage of the unicodecsv toy.
         """
-        import csv
         from toolbox import unicodecsv
         from cStringIO import StringIO
         d = StringIO("""Name,Type,County

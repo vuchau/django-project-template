@@ -1,4 +1,3 @@
-from django.contrib.syndication.views import Feed
 from django.utils.feedgenerator import Rss201rev2Feed
 
 
@@ -28,7 +27,10 @@ class MediaRSSFeed(Rss201rev2Feed):
         if 'media:title' in item:
             handler.addQuickElement(u"media:title", item['media:title'])
         if 'media:description' in item:
-            handler.addQuickElement(u"media:description", item['media:description'])
+            handler.addQuickElement(
+                u"media:description",
+                item['media:description']
+            )
 
         if 'content_url' in item:
             content = dict(url=item['content_url'])
@@ -37,7 +39,7 @@ class MediaRSSFeed(Rss201rev2Feed):
             if 'content_height' in item:
                 content['height'] = str(item['content_height'])
             handler.addQuickElement(u"media:content", '', content)
-        
+
         if 'thumbnail_url' in item:
             thumbnail = dict(url=item['thumbnail_url'])
             if 'thumbnail_width' in item:

@@ -1,11 +1,8 @@
 import os
-import sys
 import time
 import boto
-import datetime
-from boto.s3.key import Key
 from django.conf import settings
-from django.core.management.base import BaseCommand, CommandError
+from django.core.management.base import BaseCommand
 
 CHUNK_DIR = '/tmp/chunk_dir'
 os.path.exists(CHUNK_DIR) or os.mkdir(CHUNK_DIR)
@@ -15,7 +12,6 @@ class Command(BaseCommand):
     help = 'Back up the database to an archive on Amazon S3'
 
     def split_file(self, input_file, chunk_size=900000000):
-        file_size = os.path.getsize(input_file)
         f = open(input_file, 'rb')
         data = f.read()
         f.close()
@@ -24,9 +20,9 @@ class Command(BaseCommand):
             os.makedirs(CHUNK_DIR)
 
         bytes = len(data)
-        num_chunks = bytes  / chunk_size
-        if(bytes%chunk_size):
-            num_chunks  += 1
+        num_chunks = bytes / chunk_size
+        if (bytes % chunk_size):
+            num_chunks += 1
 
         chunk_names = []
         for i in range(0, bytes + 1, chunk_size):
@@ -103,7 +99,7 @@ class Command(BaseCommand):
         # Create a 'latest' copy and make both public
         print "Copying as %s" % self.latest_key_path
         key = self.bucket.lookup(mp.key_name)
-        copy = key.copy(self.bucket, self.latest_key_path)
+        key.copy(self.bucket, self.latest_key_path)
 
         # Delete the local file
         print "Deleting %s" % self.filename

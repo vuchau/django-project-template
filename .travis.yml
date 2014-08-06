@@ -10,6 +10,8 @@ install:
 - pip install -r requirements.txt
 - cp project/settings_test.template project/settings_dev.py
 script:
+- pep8 toolbox
+- pyflakes toolbox
 - python manage.py test
 - coverage run quicktest.py toolbox
 after_success:

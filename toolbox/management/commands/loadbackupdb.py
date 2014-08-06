@@ -1,7 +1,6 @@
 import os
 import boto
 from datetime import datetime
-from datetime import timedelta
 from django.conf import settings
 from optparse import make_option
 from django.core.management.base import BaseCommand, CommandError
@@ -61,11 +60,12 @@ by default. Specify date for an older one.'
             self.key_path = self.filename
 
         # Set local database settings
-        os.environ['PGPASSWORD'] = settings.DATABASES['default']['PASSWORD']
-        self.db_user = settings.DATABASES['default']['USER']
-        self.db_name = kwargs.get('name') or settings.DATABASES['default']['NAME']
+        db = settings.DATABASES['default']
+        os.environ['PGPASSWORD'] = db['PASSWORD']
+        self.db_user = db['USER']
+        self.db_name = kwargs.get('name') or db['NAME']
 
-    def handle(self, *args, **options): 
+    def handle(self, *args, **options):
         # Initialize the options
         self.set_options(*args, **options)
 
@@ -88,7 +88,8 @@ by default. Specify date for an older one.'
         # Create the database
         os.system("createdb -U %s %s" % (self.db_user, self.db_name))
         # Load the data
-        os.system("pg_restore -U %s -Fc -d %s ./%s" % (
+        os.system(
+            "pg_restore -U %s -Fc -d %s ./%s" % (
                 self.db_user,
                 self.db_name,
                 source
