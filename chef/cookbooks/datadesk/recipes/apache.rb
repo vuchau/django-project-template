@@ -66,4 +66,3 @@ bash "Remove default apache config" do
   code "rm /etc/apache2/sites-enabled/000-default"
   ignore_failure true
 end
-

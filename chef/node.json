@@ -9,6 +9,7 @@
         "datadesk::varnish",
         "datadesk::memcached",
         "datadesk::munin",
+        "datadesk::newrelic",
         "datadesk::cron",
         "datadesk::motd"
     ],

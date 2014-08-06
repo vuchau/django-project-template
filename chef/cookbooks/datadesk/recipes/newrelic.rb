@@ -67,6 +67,15 @@ script "Install Python agent" do
   EOH
 end
 
+script "Install Python configuration" do
+  interpreter "bash"
+  user "root"
+  group "root"
+  code <<-EOH
+    pip install newrelic
+  EOH
+end
+
 script "Restart apache" do
   interpreter "bash"
   user "root"
