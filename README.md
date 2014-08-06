@@ -31,6 +31,7 @@ Features
 * Preinstallation of [django-greeking](https://github.com/palewire/django-greeking)
 * [Fabric functions](https://github.com/datadesk/django-project-template/blob/master/fabfile.py) for local development and production deployment
 * Preinstallation of [tools for interacting with Amazon Web Services](https://code.google.com/p/boto/)
+* Preconfiguration of [New Relic server and Python monitoring services](https://github.com/datadesk/django-project-template/blob/master/chef/cookbooks/datadesk/recipes/newrelic.rb)
 * Preconfiguration of our preferred caching options for [development](https://github.com/datadesk/django-project-template/blob/master/project_name/settings_dev.template#L14) and [production](https://github.com/datadesk/django-project-template/blob/master/project_name/settings_prod.py#L14)
 * [Chef cookbook](https://github.com/datadesk/django-project-template/tree/master/chef) with scripted production server configuration routines
 * Management commands for scheduling [database backups](https://github.com/datadesk/django-project-template/blob/master/toolbox/management/commands/backupdb.py) to be stored in a bucket on Amazon S3 and [retrieving them](https://github.com/datadesk/django-project-template/blob/master/toolbox/management/commands/loadbackupdb.py) for local installation.
