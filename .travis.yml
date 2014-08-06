@@ -12,7 +12,6 @@ install:
 script:
 - pep8 toolbox
 - pyflakes toolbox
-- python manage.py test
-- coverage run quicktest.py toolbox
+- coverage run setup.py test
 after_success:
   - coveralls

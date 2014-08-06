@@ -6,3 +6,4 @@ django.log*
 chef/cookbooks/palewire/files/default/id_rsa
 chef/cookbooks/palewire/files/default/id_rsa.pub
 chef/cookbooks/palewire/files/default/authorized_keys
+*.egg-*
