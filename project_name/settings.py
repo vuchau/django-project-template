@@ -19,7 +19,7 @@ except ImportError:
 
 # Settings paths that are handy to use other places
 SETTINGS_DIR = os.path.dirname(os.path.realpath(__file__))
-ROOT_DIR = os.path.join(
+BASE_DIR = os.path.join(
     os.path.abspath(
         os.path.join(SETTINGS_DIR, os.path.pardir),
     ),
