@@ -46,10 +46,10 @@ USE_L10N = True
 USE_TZ = True
 
 # Media and static files
-MEDIA_ROOT = os.path.join(ROOT_DIR, '.media')
-STATIC_ROOT = os.path.join(ROOT_DIR, '.static')
+MEDIA_ROOT = os.path.join(BASE_DIR, '.media')
+STATIC_ROOT = os.path.join(BASE_DIR, '.static')
 STATICFILES_DIRS = (
-    os.path.join(ROOT_DIR, 'templates', 'static'),
+    os.path.join(BASE_DIR, 'templates', 'static'),
 )
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -62,7 +62,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 TEMPLATE_DIRS = (
-    os.path.join(ROOT_DIR, 'templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
@@ -144,7 +144,7 @@ LOGGING = {
         'logfile': {
             'level':'DEBUG',
             'class':'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(ROOT_DIR, 'django.log'),
+            'filename': os.path.join(BASE_DIR, 'django.log'),
             'maxBytes': 1024*1024*5, # 5MB,
             'backupCount': 0,
             'formatter': 'verbose',
