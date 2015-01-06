@@ -31,6 +31,7 @@ ADMINS = (
     ('Data Desk', 'datadesk@latimes.com'),
 )
 MANAGERS = ADMINS
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 # Gmail config
 EMAIL_HOST = 'smtp.gmail.com'
