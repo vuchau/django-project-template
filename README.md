@@ -28,7 +28,7 @@ Features
 * Preconfiguration of [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) for [PostGIS](http://postgis.net/)
 * Preinstallation of [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar)
 * Preinstallation of [django-greeking](https://github.com/palewire/django-greeking)
-* [Fabric functions](https://github.com/datadesk/django-project-template/blob/master/fabfile.py) for local development and production deployment
+* [Fabric functions](https://github.com/datadesk/django-project-template/blob/master/fabfile/) for local development and production deployment
 * Preinstallation of [tools for interacting with Amazon Web Services](https://code.google.com/p/boto/)
 * Preconfiguration of [New Relic server and Python monitoring services](https://github.com/datadesk/django-project-template/blob/master/chef/cookbooks/datadesk/recipes/newrelic.rb)
 * Preconfiguration of our preferred caching options for [development](https://github.com/datadesk/django-project-template/blob/master/project_name/settings_dev.template#L14) and [production](https://github.com/datadesk/django-project-template/blob/master/project_name/settings_prod.py#L14)
