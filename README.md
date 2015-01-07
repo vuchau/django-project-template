@@ -26,7 +26,6 @@ Features
 * Preconfiguration of [urls.py](https://github.com/datadesk/django-project-template/blob/master/project_name/urls.py) to serve static, media and Munin files
 * Preconfiguration of [logging options](https://github.com/datadesk/django-project-template/blob/master/project_name/settings.py#L104)
 * Preconfiguration of [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) for [PostGIS](http://postgis.net/)
-* Preinstallation of [South](http://south.readthedocs.org/en/latest/) migrations
 * Preinstallation of [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar)
 * Preinstallation of [django-greeking](https://github.com/palewire/django-greeking)
 * [Fabric functions](https://github.com/datadesk/django-project-template/blob/master/fabfile.py) for local development and production deployment
