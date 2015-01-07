@@ -89,7 +89,7 @@ $ pip install -r requirements.txt
 Generate a secret key.
 
 ```bash
-$ fab generate_secret
+$ fab makesecret
 ```
 
 Copy the key. Open the settings file and drop it near the top. While you're there, you can also customize any of the other top level configuration options.
