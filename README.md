@@ -7,7 +7,7 @@
 
 A custom template for initializing a new Django project the Data Desk way. 
 
-Uses the [built-in](https://docs.djangoproject.com/en/1.5/ref/django-admin/#startproject-projectname-destination) Django ``startproject`` templating system. Includes a number of small modifications favored by the [Los Angeles Times Data Desk](http://datadesk.latimes.com). Assumes you already have experience hacking around on Django and PostGIS.
+Uses the [built-in](https://docs.djangoproject.com/en/dev/ref/django-admin/#startproject-projectname-destination) Django ``startproject`` templating system. Includes a number of small modifications favored by the [Los Angeles Times Data Desk](http://datadesk.latimes.com). Assumes you already have experience hacking around on Django and PostGIS.
 
 Still experimental, so don't get your hopes up.
 
@@ -40,7 +40,7 @@ Features
 Requirements
 ------------
 
-* [Django 1.6](https://www.djangoproject.com/download/)
+* [Django](https://www.djangoproject.com/download/)
 * [PostGIS](https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/#installation)
 * [virtualenv](http://www.virtualenv.org/en/latest/)
 
